@@ -1,0 +1,148 @@
+/* public/assets/css/app.css */
+
+/* Import Tailwind */
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   THEME VARIABLES (light/dark)
+   ------------------------------------------------------------------ */
+body.light-mode {
+    --clr-bg: #f8fafc;
+    --clr-theme: #f3f300;
+    --clr-theme-hover: #ffff00;
+    --clr-text: #0f172a;
+    --clr-text-secondary: #475569;
+    --clr-primary: #2563eb;
+    --clr-primary-hover: #afafaf;
+    --clr-button-hover: #1d4ed8;
+    --clr-card-bg: #ffffff;
+    --clr-card-border: #e2e8f0;
+    --clr-card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+    --clr-input-bg: #ffffff;
+    --clr-input-border: #d1d5db;
+    --clr-input-focus: #2563eb;
+    --clr-footer-bg: #e9e9e9;
+    --clr-footer-text: #64748b;
+    --clr-link: #2563eb;
+    --clr-link-hover: #1d4ed8;
+    --clr-success: #16a34a;
+    --clr-warning: #f59e0b;
+    --clr-danger: #ef4444;
+
+    /* Alerts */
+    --clr-alert-success-bg: #dcfce7;
+    --clr-alert-success-text: #14532d;
+    --clr-alert-danger-bg: #fee2e2;
+    --clr-alert-danger-text: #7f1d1d;
+    --clr-alert-warning-bg: #fef3c7;
+    --clr-alert-warning-text: #78350f;
+
+    /* Overlay */
+    --clr-overlay-bg: rgba(15, 23, 42, 0.5);
+
+    /* Scrollbar */
+    --clr-scrollbar-track: #cbd5e1;
+    --clr-scrollbar-thumb: #94a3b8;
+    --clr-scrollbar-thumb-hover: #64748b;
+}
+
+body.dark-mode {
+    --clr-bg: #0b1120;
+    --clr-theme: #009399;
+    --clr-theme-hover: #00a3aa;
+    --clr-text: #f8fafc;
+    --clr-text-secondary: #94a3b8;
+    --clr-primary: #3b82f6;
+    --clr-primary-hover: #e9e9e9;
+    --clr-button-hover: #60a5fa;
+    --clr-card-bg: #1e293b;
+    --clr-card-border: #334155;
+    --clr-card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    --clr-input-bg: #1e293b;
+    --clr-input-border: #475569;
+    --clr-input-focus: #3b82f6;
+    --clr-footer-bg: #111827;
+    --clr-footer-text: #9ca3af;
+    --clr-link: #3b82f6;
+    --clr-link-hover: #60a5fa;
+    --clr-success: #22c55e;
+    --clr-warning: #f59e0b;
+    --clr-danger: #ef4444;
+
+    /* Alerts */
+    --clr-alert-success-bg: rgba(22, 163, 74, 0.2);
+    --clr-alert-success-text: #4ade80;
+    --clr-alert-danger-bg: rgba(239, 68, 68, 0.2);
+    --clr-alert-danger-text: #f87171;
+    --clr-alert-warning-bg: rgba(245, 158, 11, 0.2);
+    --clr-alert-warning-text: #fbbf24;
+
+    /* Overlay */
+    --clr-overlay-bg: rgba(0, 0, 0, 0.75);
+
+    /* Scrollbar */
+    --clr-scrollbar-track: #1e293b;
+    --clr-scrollbar-thumb: #334155;
+    --clr-scrollbar-thumb-hover: #475569;
+}
+
+/* Apply theme to body */
+body {
+    background-color: var(--clr-bg);
+    color: var(--clr-text);
+    font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    direction: rtl;
+    line-height: 1.6;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Scrollbar */
+html {
+    direction: rtl;
+    scrollbar-gutter: stable both-edges;
+    scrollbar-color: var(--clr-scrollbar-thumb) var(--clr-scrollbar-track);
+    scrollbar-width: thin;
+}
+
+html::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--clr-scrollbar-track);
+    border-radius: 6px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--clr-scrollbar-thumb);
+    border-radius: 6px;
+    border: 3px solid var(--clr-scrollbar-track);
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background: var(--clr-scrollbar-thumb-hover);
+}
+
+/* ------------------------------------------------------------------
+   CUSTOM COMPONENTS (Sidebar, Cards, Modals, etc.)
+   ------------------------------------------------------------------ */
+/* ... (we'll add them here) */
+@media (hover: hover) {
+    .hover\:text-\[var\(--clr-text-secondary\)\]:hover {
+        color: var(--clr-text-secondary);
+    }
+}
+
+.text-main {
+    color: var(--clr-text);
+}
+
+.text-secondary {
+    color: var(--clr-text-secondary);
+}
+
+/* ------------------------------------------------------------------
+   UTILITIES (Optional – can also use Tailwind classes directly)
+   ------------------------------------------------------------------ */

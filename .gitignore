@@ -1,0 +1,5 @@
+# .gitignore for PHP project
+*.log
+.env
+vendor/
+node_modules/
